@@ -32,7 +32,9 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 tasks.register<Zip>("buildZip") {
-    dependsOn(tasks.build)
+    from(tasks.compileKotlin)
+    from(tasks.test)
+    from(tasks.processResources)
     into("lib") {
         from(configurations.runtimeClasspath)
     }
