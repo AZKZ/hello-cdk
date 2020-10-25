@@ -1,3 +1,5 @@
+package com.azkz
+
 import com.amazonaws.services.lambda.runtime.Context
 import io.mockk.mockk
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -11,6 +13,6 @@ class HelloHandlerTest {
         val mockContext = mockk<Context>()
         val returnValue = HelloHandler().handleRequest(input,mockContext)
 
-        assertEquals("Hello:${input}",returnValue)
+        assertEquals("Hello World:${input}",returnValue)
     }
 }

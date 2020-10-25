@@ -1,7 +1,7 @@
+package com.azkz
 import com.amazonaws.services.lambda.runtime.Context
 import com.amazonaws.services.lambda.runtime.RequestHandler
-import java.text.SimpleDateFormat
-import java.util.*
+import java.time.LocalDate
 
 class HelloHandler:RequestHandler<String,String> {
     /**
@@ -11,7 +11,7 @@ class HelloHandler:RequestHandler<String,String> {
      * @return The Lambda Function output
      */
     override fun handleRequest(input: String?, context: Context?): String {
-        return "Hello:${input}"
+        return "Hello World:${input}"
     }
 
 }
