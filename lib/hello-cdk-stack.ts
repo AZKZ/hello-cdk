@@ -15,8 +15,9 @@ export class HelloCdkStack extends core.Stack {
     })
 
     // API
-    const helloApi = new apigateway.LambdaRestApi(this,'hello-api',{
-      handler:helloHandler,
+    const helloApi = new apigateway.LambdaRestApi(this, 'hello-api', {
+      handler: helloHandler,
+      proxy: false
     })
     helloApi.root.addMethod('GET');
     helloApi.root.addMethod('POST');
