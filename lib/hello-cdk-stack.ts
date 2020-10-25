@@ -6,7 +6,6 @@ import * as apigateway from "@aws-cdk/aws-apigateway";
 export class HelloCdkStack extends core.Stack {
   constructor(scope: core.Construct, id: string, props?: core.StackProps) {
     super(scope, id, props);
-    console.log(__dirname)
 
     // Lambda関数
     const helloHandler = new lambda.Function(this, 'HelloHandler', {
