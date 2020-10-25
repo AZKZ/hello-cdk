@@ -32,6 +32,7 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 tasks.register<Zip>("buildZip") {
+    archiveFileName.set("HelloCdkKotlinSource.zip")
     from(tasks.compileKotlin)
     from(tasks.test)
     from(tasks.processResources)
